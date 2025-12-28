@@ -1,1 +1,12 @@
-jhฎึฌสw"ก๚่Z )เส'~("+ต๘ฅx*'~(ฎฌชVฅrฆส)ฉขปiข_ฎฌชVฅrฆฬฑดฌสw"ข)ฉขปZณ)Üý้เwฟ~บ&ýส'~(ฎ•้ศฆฆํrํ{_ฎฆกืฅดZตฆฺฑ่ฆฆํซ~บ&^–
+# ะ”ะฐะฝะฝัะต ะพั @BotFather
+BOT_TOKEN=7401521507:AAH30THn6iZGbm26-gXTH6tXC18cfABtoG0
+BOT_USERNAME=Cyber_Adjutant_bot
+
+# ะกะตะบั€ะตัะฝัะน ะบะปัั ะดะปั ัะธัั€ะพะฒะฐะฝะธั ัะตััะธะน (ะฟั€ะธะดัะผะฐะน ะปัะฑัั ััั€ะพะบั)
+JWT_SECRET=super_secret_run_coach_2025
+
+# ะะฐััั€ะพะนะบะธ ะฑะฐะทั ะดะฐะฝะฝัั… (ะดะปั Docker ะพััะฐะฒะปัะตะผ ัะฐะบ)
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_NAME=run_trainer
+DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/run_trainer
