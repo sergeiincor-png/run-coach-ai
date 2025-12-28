@@ -25,20 +25,21 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    env_file:
-      - .env
     environment:
       DATABASE_URL: postgresql+asyncpg://${DB_USER:-postgres}:${DB_PASSWORD:-postgres}@db:5432/${DB_NAME:-run_trainer}
-    # Автоматическое применение миграций при старте (в продакшене лучше делать отдельно)
+      BOT_TOKEN: ${BOT_TOKEN}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 30
+      REFRESH_TOKEN_EXPIRE_DAYS: 30
+      CORS_ORIGINS: "http://localhost,https://yourdomain.com"
     command: >
-      bash -c "sleep 5 && uvicorn main:app --host 0.0.0.0 --port 8000"
+      bash -c "alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8000"
 
   web:
     build: ./web
     container_name: run_trainer_web
     restart: always
-    env_file:
-      - .env
     environment:
       NEXT_PUBLIC_API_URL: /api
       NEXT_PUBLIC_BOT_USERNAME: ${BOT_USERNAME}

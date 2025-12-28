@@ -1,0 +1,6 @@
+
+{
+  "name": "AI Run Trainer - Telegram Auth Monorepo",
+  "description": "Production-ready skeleton for an AI running coach service with Telegram authentication, FastAPI backend, Next.js frontend, and PostgreSQL database.",
+  "requestFramePermissions": []
+}
